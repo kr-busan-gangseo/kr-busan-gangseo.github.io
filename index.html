@@ -117,35 +117,538 @@
   ]
 }
   </script>
-  <style>
-:root { --fg:#1a1a2e; --muted:#5c5c72; --accent:#2d5bff; --bg:#ffffff; --card:#f6f7fb; --line:#e6e8f0; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color:var(--fg); background:var(--bg); line-height:1.7; }
-main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-header { padding: 2rem 0 1rem; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem; }
-.eyebrow { color: var(--accent); font-weight: 600; margin: 0 0 .25rem; letter-spacing: .02em; }
-h1 { font-size: 2.4rem; margin: 0; }
-h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; padding-left: .6rem; border-left: 4px solid var(--accent); }
-section p { margin: .25rem 0 0; }
-ul { margin: .5rem 0 0; padding-left: 1.2rem; }
-li { margin: .25rem 0; }
-.facts, .symbols { list-style: none; padding: 1rem 1.2rem; background: var(--card); border-radius: 12px; }
-.faq details { border: 1px solid var(--line); border-radius: 10px; padding: .5rem .9rem; margin: .5rem 0; }
-.faq summary { cursor: pointer; font-weight: 600; }
-.faq details p { margin: .5rem 0 .25rem; color: var(--muted); }
-.sources { font-size: .9rem; color: var(--muted); }
-a { color: var(--accent); }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-</style>
+  <script id="region-data" type="application/json">
+{
+  "characteristics": "강서구 인구는 신도시 개발과 함께 빠르게 늘어 명지동 일대가 구에서 가장 인구가 밀집한 지역으로 성장했으며, 농어촌과 산업단지, 신도시가 한 지역에 섞인 독특한 도시 성격을 보입니다. 대저 토마토, 명지 대파, 강동 깻잎, 화훼 같은 특산 농산물과 가덕도 숭어·굴·김 등 수산물이 함께 나는 부산의 대표 먹거리 산지입니다. 녹산국가산업단지에는 조립금속·정밀기계·석유화학 업체가 밀집하고, 르노코리아 자동차 공장과 부산신항, 김해국제공항이 자리해 제조와 물류·항공이 지역 경제를 떠받칩니다. 여기에 명지국제신도시, 명지오션시티, 에코델타시티 등 대규모 신도시가 조성되면서 서부산권의 주거·산업 성장 중심지로 자리매김하고 있습니다. 가덕도 앞바다에는 24시간 운영을 목표로 한 가덕도신공항 건설이 추진되어, 강서구는 부산의 미래 관문으로도 주목받고 있습니다.",
+  "coords": {
+    "lat": 35.2122,
+    "lng": 128.9808
+  },
+  "cultural_heritage": [
+    {
+      "description": "흥선대원군이 쇄국정책을 알리기 위해 전국에 세운 척화비 가운데 하나로, 가덕도에 남아 부산광역시 기념물 제35호로 지정되어 있습니다. 개항기 조선의 대외 정책을 보여주는 실물 자료입니다.",
+      "name": "가덕도 척화비"
+    },
+    {
+      "description": "조선 중종 39년(1544년) 남해안 방어를 위해 가덕도 천성 지역에 축조된 진성으로, 왜구와 외침에 대비한 수군 방어 시설의 흔적을 남기고 있습니다. 가덕진성과 함께 조선 수군 방어 체계를 이해하는 데 중요한 유적입니다.",
+      "name": "천성진성"
+    },
+    {
+      "description": "신라 석탑 양식을 계승해 고려 전기에 세워진 높이 약 2.7m의 석탑으로 부산광역시 유형문화유산입니다. 강서 내륙에 불교문화가 이어졌음을 보여주는 귀중한 문화재입니다.",
+      "name": "범방동 삼층석탑"
+    },
+    {
+      "description": "4월이면 대저동에서는 특산 짭짤이 토마토를 주제로 한 대저토마토축제가, 가덕도에서는 봄 숭어를 즐기는 가덕도숭어축제가 열립니다. 10월에는 강서낙동강갈대꽃축제가 열려 강서의 농어촌 문화를 알립니다.",
+      "name": "대저토마토축제·가덕도숭어축제"
+    }
+  ],
+  "faq": [
+    {
+      "answer": "강서구청은 부산광역시 강서구 낙동북로 477(대저1동)에 있습니다. 부산 도시철도 3호선 강서구청역에서 가깝고, 승용차로는 남해고속도로와 중앙고속도로를 이용해 접근할 수 있습니다.",
+      "question": "강서구청은 어디에 있고 어떻게 가나요?"
+    },
+    {
+      "answer": "대저 짭짤이 토마토와 명지 대파, 강동 깻잎, 화훼가 유명하며, 바다에서는 가덕도 숭어와 굴·김·파래가 많이 납니다. 봄에는 대저토마토축제와 가덕도숭어축제가 함께 열립니다.",
+      "question": "강서구의 대표 특산물은 무엇인가요?"
+    },
+    {
+      "answer": "가덕도는 거가대교와 연결도로를 통해 승용차로 오갈 수 있으며, 가덕도등대·연대봉·대항 새바지 등 해안 절경과 어촌체험마을을 즐길 수 있습니다. 현재 섬 앞바다에는 가덕도신공항 건설이 추진되고 있습니다.",
+      "question": "가덕도는 어떻게 갈 수 있나요?"
+    },
+    {
+      "answer": "대저생태공원의 37만㎡ 유채꽃 단지에서 4월에 유채꽃 축제가 열려 부산의 대표 봄 나들이 명소로 꼽힙니다. 맥도생태공원 산책로에서도 갈대와 철새를 함께 감상할 수 있습니다.",
+      "question": "강서구에서 봄에 가볼 만한 곳은 어디인가요?"
+    },
+    {
+      "answer": "낙동강이 바다로 들어가는 하구에 넓은 갯벌과 습지, 갈대밭이 발달해 있어 천연기념물 제179호 낙동강하구 철새도래지로 지정되어 있습니다. 매년 160여 종 십수만 마리의 철새가 겨울을 나기 위해 찾아옵니다.",
+      "question": "강서구는 왜 철새 도래지로 유명한가요?"
+    },
+    {
+      "answer": "구화는 배꽃, 구목은 팽나무, 구조는 청둥오리이며, 청둥오리를 의인화한 '청두리' 캐릭터가 있습니다. 낙동강 하구의 자연환경을 상징적으로 담고 있습니다.",
+      "question": "강서구의 상징은 무엇인가요?"
+    }
+  ],
+  "geography_nature": "강서구는 부산 서부 낙동강 본류를 경계로 동쪽으로 사상구·사하구·북구와 접하고, 서쪽으로는 경상남도 김해시와 창원시 진해구에 맞닿아 있으며 남쪽은 남해로 열려 있습니다. 지형의 핵심은 낙동강이 바다로 들어가며 만든 삼각주로, 대저도·맥도·명지도 등 하중도와 신덕습지 같은 넓은 습지가 발달해 있어 평야가 대부분을 이룹니다. 강 가운데 섬과 하구 갯벌은 천연기념물 제179호 낙동강하구 철새도래지로 지정되어, 매년 160여 종 십수만 마리의 철새가 찾아드는 국내 대표적 철새 낙원입니다. 남쪽 바다에는 부산에서 가장 큰 섬인 가덕도가 있으며, 연대봉과 국수봉 같은 산지와 깎아지른 해안 절벽·자갈밭·동백숲이 어우러져 '해금강'에 비유되는 절경을 이룹니다. 연평균 기온 14~15℃, 강수량 1,700~1,800㎜의 온화한 기후에 평균 조차가 1.4m로, 강물과 바닷물이 만나 굴·김·파래 양식이 활발한 것도 특징입니다.",
+  "history": "강서구 일대는 가야 시대 금관가야(가락국)의 영역이었고, 532년 구형왕이 신라에 항복하면서 금관군으로 편입되어 김해 지역과 역사적 뿌리를 함께합니다. 조선 중종 39년(1544년) 가덕도에 가덕진과 천성진이 설치되면서 남해 방어의 요충지로 본격적으로 사람이 살기 시작했고, 임진왜란 때는 죽도·눌차·성북 일대에 왜성이 축조되기도 했습니다. 낙동강 하구의 넓은 갯벌은 일제강점기부터 명지·녹산·대저 지역의 대규모 간척과 제방 축조로 농경지와 마을로 바뀌어 갔습니다. 오랫동안 경상남도 김해군에 속했던 이 지역은 1978년 부산직할시로 일부 편입된 뒤, 1989년 1월 1일 북구에서 분리되어 강서구가 신설되었습니다. 2015년 천가동이 가덕도동으로 이름을 바꾸고, 2025년 녹산동이 녹산동과 신호동으로 나뉘는 등 신도시 성장에 맞춰 행정구역이 계속 재편되고 있습니다.",
+  "intro": "강서구는 낙동강이 남해로 흘러들며 쌓아 올린 삼각주와 김해평야, 그리고 남해 끝자락의 가덕도까지 아우르는 부산에서 가장 넓은 자치구입니다. 면적은 181.5㎢로 부산 전체의 약 23.6%를 차지하지만, 그 상당 부분이 대저도·맥도·명지도 같은 강 가운데 섬과 갯벌·습지로 이루어진 점이 다른 도심 구들과 뚜렷이 구별됩니다. 대저 토마토와 명지 대파, 강동 깻잎이 자라는 비옥한 농경지가 펼쳐지는 한편, 녹산국가산업단지와 부산신항, 김해국제공항이 자리 잡아 농업·물류·첨단 제조가 한 지역에 공존합니다. 명지국제신도시와 에코델타시티 개발로 새 아파트촌이 빠르게 들어서면서, 전통적인 강 하구 농어촌에서 서부산의 성장 거점으로 성격이 바뀌고 있는 곳입니다.",
+  "landmarks": [
+    {
+      "description": "1909년 처음 점등한 근대 등대로, 대한제국 황실 문양인 오얏꽃 무늬가 새겨져 있어 개항기 건축의 특징을 잘 보여줍니다. 부산광역시 유형문화유산으로 지정되어 남해를 지키는 100여 년의 역사를 간직하고 있습니다.",
+      "name": "가덕도등대"
+    },
+    {
+      "description": "낙동강 하구 매립지에 조성된 대규모 계획 신도시로, 바다를 낀 아파트 단지와 상업지구가 들어서 강서구에서 가장 인구가 많은 생활 중심지입니다. 인근 에코델타시티와 함께 서부산 개발을 상징하는 곳입니다.",
+      "name": "명지오션시티·명지국제신도시"
+    },
+    {
+      "description": "녹산동·가덕도 일대에 조성된 국내 최대급 컨테이너 항만으로, 세계 물동량 상위권을 자랑하는 동북아 물류 거점입니다. 부산신항선 철도와 연결되어 항만·철도 복합 물류가 이뤄지는 강서구의 대표 산업 시설입니다.",
+      "name": "부산신항"
+    },
+    {
+      "description": "범방동에 자리한 대규모 경마·레저 시설로, 경주뿐 아니라 넓은 잔디 공원과 승마 체험장을 갖춰 가족 나들이 명소로도 이용됩니다. 서부산권의 대표적인 여가·레저 공간입니다.",
+      "name": "부산경남경마공원(렛츠런파크 부산경남)"
+    }
+  ],
+  "nature_rest": [
+    {
+      "description": "명지동 낙동강하구둑에서 대저2동 공항램프까지 강 둔치에 조성된 생태공원으로, 갈대와 연꽃·해바라기가 산책로를 따라 펼쳐집니다. 천연기념물 철새도래지에 속해 백로·청둥오리·물떼새 등을 관찰할 수 있는 자연 휴식처입니다.",
+      "name": "맥도생태공원"
+    },
+    {
+      "description": "강서낙동대교에서 구포대교에 이르는 낙동강변 친수공간으로, 신덕습지와 자연초지, 축구장·야구장 등 체육시설을 갖추고 있습니다. 봄에 37만㎡ 규모의 유채꽃 단지가 만개해 유채꽃 축제가 열리는 부산의 대표 봄 명소입니다.",
+      "name": "대저생태공원"
+    },
+    {
+      "description": "가덕도 중심의 연대봉은 남해와 거가대교를 조망하는 등산 코스로 인기가 높고, 대항 새바지 해안은 조용한 일출과 동백숲·자갈밭 경관을 즐길 수 있는 곳입니다. 어촌체험마을과 함께 섬 여행의 매력을 더합니다.",
+      "name": "가덕도 연대봉과 대항 새바지"
+    },
+    {
+      "description": "가덕도 해안 일대에 자생하는 동백나무 군락으로, 부산광역시 기념물 제36호로 지정되어 보호받고 있습니다. 겨울에서 이른 봄까지 붉은 동백이 해안 절경과 어우러지는 자연 명소입니다.",
+      "name": "가덕도 자생 동백군락지"
+    }
+  ],
+  "org_slug": "kr-busan-gangseo",
+  "sido": "부산광역시",
+  "sigungu": "강서구",
+  "symbols": {
+    "bird": "청둥오리",
+    "flower": "배꽃",
+    "tree": "팽나무"
+  },
+  "transport": "강서구는 낙동강 삼각주와 가덕도까지 넓게 펼쳐진 지형 특성상 육·해·공 교통이 모두 발달해 있습니다. 부산 도시철도 3호선이 대저역·체육공원역·강서구청역을 지나고, 부산김해경전철이 공항역·덕두역·대저역 등으로 이어져 김해 방면과 연결됩니다. 도로는 남해고속도로와 남해고속도로제2지선, 중앙고속도로가 지역을 관통해 창원·김해·부산 도심을 잇습니다. 국내 남부권의 관문인 김해국제공항이 대저 지역에 자리해 항공 교통의 중심 역할을 하고, 거가대교를 통해 가덕도에서 거제까지 바로 이동할 수 있습니다. 여기에 부산신항선 화물철도와 부산신항이 결합해 컨테이너 물류를 처리하며, 가덕도신공항 건설이 추진되면서 강서구의 교통 위상은 더욱 커질 전망입니다."
+}
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="eyebrow">부산광역시</p>
-      <h1>강서구</h1>
-    </header>
-    <div class="content">
-      <section id="intro">
+<style>
+  /* ===== 부산 강서구 · 육각 벌집 그리드 (kr-busan-gangseo) ===== */
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+  :root{
+    --gs-cyan:#00BFFF;
+    --gs-silver:#C0C0C0;
+    --gs-ink:#04121c;
+    --gs-ink2:#08202f;
+    --gs-panel:rgba(8,32,47,.72);
+    --gs-line:rgba(0,191,255,.28);
+    --gs-hex-w:120px;   /* hexagon flat-to-flat width */
+    --gs-hex-h:104px;   /* row vertical advance */
+    --gs-round:'TmoneyRoundWind','티머니 둥근바람','Noto Sans KR',sans-serif;
+    --gs-mono:'Orbitron','Noto Sans KR',sans-serif;
+  }
+
+  /* try to pull 티머니 둥근바람 if present on device, else graceful fallback */
+  @font-face{
+    font-family:'TmoneyRoundWind';
+    src:local('TmoneyRoundWind'),local('Tmoney RoundWind'),local('티머니 둥근바람');
+    font-display:swap;
+  }
+
+  #gs-root{
+    position:relative;
+    font-family:var(--gs-round);
+    color:#dff3fb;
+    background:
+      radial-gradient(1200px 600px at 78% -8%, rgba(0,191,255,.16), transparent 60%),
+      radial-gradient(900px 500px at 8% 108%, rgba(192,192,192,.10), transparent 55%),
+      linear-gradient(180deg,#03101a 0%,#04141f 45%,#020b12 100%);
+    padding:0 0 4rem;
+    overflow:hidden;
+    line-height:1.75;
+    isolation:isolate;
+  }
+  #gs-root *{box-sizing:border-box;}
+
+  /* background hex mesh (decorative) */
+  #gs-mesh{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;}
+
+  /* ---------- HERO ---------- */
+  .gs-hero{
+    position:relative;z-index:2;
+    max-width:1180px;margin:0 auto;
+    padding:clamp(3rem,7vw,6rem) 1.4rem 2rem;
+    text-align:center;
+  }
+  .gs-kicker{
+    font-family:var(--gs-mono);
+    letter-spacing:.42em;font-weight:700;font-size:.72rem;
+    color:var(--gs-cyan);text-transform:uppercase;
+    margin:0 0 1.1rem;padding-left:.42em;
+  }
+  .gs-title{
+    font-family:var(--gs-round);
+    font-weight:700;
+    font-size:clamp(2.4rem,7vw,5rem);
+    line-height:1.02;margin:0;
+    color:#eaf9ff;
+    text-shadow:0 0 30px rgba(0,191,255,.35);
+  }
+  .gs-title b{color:var(--gs-cyan);font-weight:700;}
+  .gs-sub{
+    max-width:640px;margin:1.4rem auto 0;
+    color:#a9c8d6;font-weight:300;font-size:clamp(1rem,2.3vw,1.18rem);
+  }
+  .gs-metrics{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;
+    margin:2.2rem auto 0;max-width:760px;
+  }
+  .gs-chip{
+    font-family:var(--gs-mono);font-size:.72rem;font-weight:500;
+    letter-spacing:.14em;color:var(--gs-silver);
+    border:1px solid var(--gs-line);border-radius:999px;
+    padding:.5rem 1rem;background:rgba(0,191,255,.05);
+  }
+  .gs-chip b{color:var(--gs-cyan);font-weight:700;}
+
+  /* ---------- COMB LAYOUT (the honeycomb of content cells) ---------- */
+  .gs-comb-wrap{
+    position:relative;z-index:2;
+    max-width:1180px;margin:2.6rem auto 0;padding:0 1.2rem;
+  }
+  .gs-comb-head{
+    display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap;
+    margin:0 0 1.4rem;padding-bottom:.9rem;
+    border-bottom:1px solid var(--gs-line);
+  }
+  .gs-comb-head h2{
+    margin:0;font-family:var(--gs-mono);font-weight:700;
+    font-size:1rem;letter-spacing:.2em;color:#eaf9ff;text-transform:uppercase;
+  }
+  .gs-comb-head span{font-size:.82rem;color:#7fa6b7;font-weight:300;}
+
+  /* the interactive comb: a set of hex nav tiles */
+  .gs-comb{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,var(--gs-hex-w));
+    gap:6px calc(var(--gs-hex-w) * .04);
+    justify-content:center;
+    padding:calc(var(--gs-hex-h) * .12) 0;
+  }
+  .gs-hex{
+    position:relative;
+    width:var(--gs-hex-w);height:var(--gs-hex-h);
+    /* pointy-flat hexagon via clip-path */
+    clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+    background:var(--gs-panel);
+    border:0;color:var(--gs-silver);
+    cursor:pointer;font-family:var(--gs-round);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:4px;text-align:center;padding:0 10px;
+    transition:transform .28s cubic-bezier(.2,.9,.25,1), background .28s, color .28s, box-shadow .28s;
+    outline:none;
+  }
+  /* offset every 2nd cell down to interlock — via nth-child margin trick */
+  .gs-comb .gs-hex:nth-child(even){transform:translateY(calc(var(--gs-hex-h) * .5));}
+  .gs-hex::before{
+    content:"";position:absolute;inset:2px;
+    clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+    background:linear-gradient(150deg,rgba(0,191,255,.10),rgba(4,18,28,.9));
+    z-index:-1;
+  }
+  .gs-hex .gs-hicon{font-size:1.35rem;color:var(--gs-cyan);line-height:1;}
+  .gs-hex .gs-hlabel{
+    font-size:.74rem;font-weight:500;letter-spacing:.02em;color:#cfe6f0;
+    line-height:1.2;
+  }
+  .gs-hex .gs-hidx{
+    position:absolute;top:16px;font-family:var(--gs-mono);
+    font-size:.56rem;color:rgba(192,192,192,.55);letter-spacing:.1em;
+  }
+  /* hover / active / chain-lit states */
+  .gs-hex:hover,.gs-hex:focus-visible{
+    background:rgba(0,191,255,.16);
+    color:#fff;
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 0 0 1px var(--gs-cyan),0 0 26px rgba(0,191,255,.5);
+  }
+  .gs-comb .gs-hex:nth-child(even):hover,
+  .gs-comb .gs-hex:nth-child(even):focus-visible{
+    transform:translateY(calc(var(--gs-hex-h) * .5 - 4px)) scale(1.05);
+  }
+  .gs-hex.gs-lit{                          /* JS-lit adjacent neighbours */
+    background:rgba(0,191,255,.10);
+    box-shadow:0 0 0 1px rgba(0,191,255,.55),0 0 16px rgba(0,191,255,.28);
+  }
+  .gs-hex.gs-active{
+    background:rgba(0,191,255,.22);color:#fff;
+    box-shadow:0 0 0 1.5px var(--gs-cyan),0 0 30px rgba(0,191,255,.55);
+  }
+  .gs-hex.gs-active .gs-hicon{color:#eaf9ff;}
+
+  /* ---------- READER PANEL (holds       <section id="intro">
+        <h2>지역 소개</h2>
+        <p>강서구는 낙동강이 남해로 흘러들며 쌓아 올린 삼각주와 김해평야, 그리고 남해 끝자락의 가덕도까지 아우르는 부산에서 가장 넓은 자치구입니다. 면적은 181.5㎢로 부산 전체의 약 23.6%를 차지하지만, 그 상당 부분이 대저도·맥도·명지도 같은 강 가운데 섬과 갯벌·습지로 이루어진 점이 다른 도심 구들과 뚜렷이 구별됩니다. 대저 토마토와 명지 대파, 강동 깻잎이 자라는 비옥한 농경지가 펼쳐지는 한편, 녹산국가산업단지와 부산신항, 김해국제공항이 자리 잡아 농업·물류·첨단 제조가 한 지역에 공존합니다. 명지국제신도시와 에코델타시티 개발로 새 아파트촌이 빠르게 들어서면서, 전통적인 강 하구 농어촌에서 서부산의 성장 거점으로 성격이 바뀌고 있는 곳입니다.</p>
+      </section>
+      <section id="facts">
+        <h2>주요 통계</h2>
+        <ul class="facts">
+          <li>인구: 약 142,918명 (2021)</li>
+          <li>면적: 181.5 km²</li>
+          <li>신설: 1989-01-01</li>
+        </ul>
+      </section>
+      <section id="history">
+        <h2>역사</h2>
+        <p>강서구 일대는 가야 시대 금관가야(가락국)의 영역이었고, 532년 구형왕이 신라에 항복하면서 금관군으로 편입되어 김해 지역과 역사적 뿌리를 함께합니다. 조선 중종 39년(1544년) 가덕도에 가덕진과 천성진이 설치되면서 남해 방어의 요충지로 본격적으로 사람이 살기 시작했고, 임진왜란 때는 죽도·눌차·성북 일대에 왜성이 축조되기도 했습니다. 낙동강 하구의 넓은 갯벌은 일제강점기부터 명지·녹산·대저 지역의 대규모 간척과 제방 축조로 농경지와 마을로 바뀌어 갔습니다. 오랫동안 경상남도 김해군에 속했던 이 지역은 1978년 부산직할시로 일부 편입된 뒤, 1989년 1월 1일 북구에서 분리되어 강서구가 신설되었습니다. 2015년 천가동이 가덕도동으로 이름을 바꾸고, 2025년 녹산동이 녹산동과 신호동으로 나뉘는 등 신도시 성장에 맞춰 행정구역이 계속 재편되고 있습니다.</p>
+      </section>
+      <section id="geography">
+        <h2>지리·자연환경</h2>
+        <p>강서구는 부산 서부 낙동강 본류를 경계로 동쪽으로 사상구·사하구·북구와 접하고, 서쪽으로는 경상남도 김해시와 창원시 진해구에 맞닿아 있으며 남쪽은 남해로 열려 있습니다. 지형의 핵심은 낙동강이 바다로 들어가며 만든 삼각주로, 대저도·맥도·명지도 등 하중도와 신덕습지 같은 넓은 습지가 발달해 있어 평야가 대부분을 이룹니다. 강 가운데 섬과 하구 갯벌은 천연기념물 제179호 낙동강하구 철새도래지로 지정되어, 매년 160여 종 십수만 마리의 철새가 찾아드는 국내 대표적 철새 낙원입니다. 남쪽 바다에는 부산에서 가장 큰 섬인 가덕도가 있으며, 연대봉과 국수봉 같은 산지와 깎아지른 해안 절벽·자갈밭·동백숲이 어우러져 &#x27;해금강&#x27;에 비유되는 절경을 이룹니다. 연평균 기온 14~15℃, 강수량 1,700~1,800㎜의 온화한 기후에 평균 조차가 1.4m로, 강물과 바닷물이 만나 굴·김·파래 양식이 활발한 것도 특징입니다.</p>
+      </section>
+      <section id="characteristics">
+        <h2>지역 특징</h2>
+        <p>강서구 인구는 신도시 개발과 함께 빠르게 늘어 명지동 일대가 구에서 가장 인구가 밀집한 지역으로 성장했으며, 농어촌과 산업단지, 신도시가 한 지역에 섞인 독특한 도시 성격을 보입니다. 대저 토마토, 명지 대파, 강동 깻잎, 화훼 같은 특산 농산물과 가덕도 숭어·굴·김 등 수산물이 함께 나는 부산의 대표 먹거리 산지입니다. 녹산국가산업단지에는 조립금속·정밀기계·석유화학 업체가 밀집하고, 르노코리아 자동차 공장과 부산신항, 김해국제공항이 자리해 제조와 물류·항공이 지역 경제를 떠받칩니다. 여기에 명지국제신도시, 명지오션시티, 에코델타시티 등 대규모 신도시가 조성되면서 서부산권의 주거·산업 성장 중심지로 자리매김하고 있습니다. 가덕도 앞바다에는 24시간 운영을 목표로 한 가덕도신공항 건설이 추진되어, 강서구는 부산의 미래 관문으로도 주목받고 있습니다.</p>
+      </section>
+      <section id="landmarks">
+        <h2>대표 명소</h2>
+        <ul>
+          <li><strong>가덕도등대</strong> — 1909년 처음 점등한 근대 등대로, 대한제국 황실 문양인 오얏꽃 무늬가 새겨져 있어 개항기 건축의 특징을 잘 보여줍니다. 부산광역시 유형문화유산으로 지정되어 남해를 지키는 100여 년의 역사를 간직하고 있습니다.</li>
+          <li><strong>명지오션시티·명지국제신도시</strong> — 낙동강 하구 매립지에 조성된 대규모 계획 신도시로, 바다를 낀 아파트 단지와 상업지구가 들어서 강서구에서 가장 인구가 많은 생활 중심지입니다. 인근 에코델타시티와 함께 서부산 개발을 상징하는 곳입니다.</li>
+          <li><strong>부산신항</strong> — 녹산동·가덕도 일대에 조성된 국내 최대급 컨테이너 항만으로, 세계 물동량 상위권을 자랑하는 동북아 물류 거점입니다. 부산신항선 철도와 연결되어 항만·철도 복합 물류가 이뤄지는 강서구의 대표 산업 시설입니다.</li>
+          <li><strong>부산경남경마공원(렛츠런파크 부산경남)</strong> — 범방동에 자리한 대규모 경마·레저 시설로, 경주뿐 아니라 넓은 잔디 공원과 승마 체험장을 갖춰 가족 나들이 명소로도 이용됩니다. 서부산권의 대표적인 여가·레저 공간입니다.</li>
+        </ul>
+      </section>
+      <section id="heritage">
+        <h2>문화유산·문화시설</h2>
+        <ul>
+          <li><strong>가덕도 척화비</strong> — 흥선대원군이 쇄국정책을 알리기 위해 전국에 세운 척화비 가운데 하나로, 가덕도에 남아 부산광역시 기념물 제35호로 지정되어 있습니다. 개항기 조선의 대외 정책을 보여주는 실물 자료입니다.</li>
+          <li><strong>천성진성</strong> — 조선 중종 39년(1544년) 남해안 방어를 위해 가덕도 천성 지역에 축조된 진성으로, 왜구와 외침에 대비한 수군 방어 시설의 흔적을 남기고 있습니다. 가덕진성과 함께 조선 수군 방어 체계를 이해하는 데 중요한 유적입니다.</li>
+          <li><strong>범방동 삼층석탑</strong> — 신라 석탑 양식을 계승해 고려 전기에 세워진 높이 약 2.7m의 석탑으로 부산광역시 유형문화유산입니다. 강서 내륙에 불교문화가 이어졌음을 보여주는 귀중한 문화재입니다.</li>
+          <li><strong>대저토마토축제·가덕도숭어축제</strong> — 4월이면 대저동에서는 특산 짭짤이 토마토를 주제로 한 대저토마토축제가, 가덕도에서는 봄 숭어를 즐기는 가덕도숭어축제가 열립니다. 10월에는 강서낙동강갈대꽃축제가 열려 강서의 농어촌 문화를 알립니다.</li>
+        </ul>
+      </section>
+      <section id="nature">
+        <h2>자연·휴식</h2>
+        <ul>
+          <li><strong>맥도생태공원</strong> — 명지동 낙동강하구둑에서 대저2동 공항램프까지 강 둔치에 조성된 생태공원으로, 갈대와 연꽃·해바라기가 산책로를 따라 펼쳐집니다. 천연기념물 철새도래지에 속해 백로·청둥오리·물떼새 등을 관찰할 수 있는 자연 휴식처입니다.</li>
+          <li><strong>대저생태공원</strong> — 강서낙동대교에서 구포대교에 이르는 낙동강변 친수공간으로, 신덕습지와 자연초지, 축구장·야구장 등 체육시설을 갖추고 있습니다. 봄에 37만㎡ 규모의 유채꽃 단지가 만개해 유채꽃 축제가 열리는 부산의 대표 봄 명소입니다.</li>
+          <li><strong>가덕도 연대봉과 대항 새바지</strong> — 가덕도 중심의 연대봉은 남해와 거가대교를 조망하는 등산 코스로 인기가 높고, 대항 새바지 해안은 조용한 일출과 동백숲·자갈밭 경관을 즐길 수 있는 곳입니다. 어촌체험마을과 함께 섬 여행의 매력을 더합니다.</li>
+          <li><strong>가덕도 자생 동백군락지</strong> — 가덕도 해안 일대에 자생하는 동백나무 군락으로, 부산광역시 기념물 제36호로 지정되어 보호받고 있습니다. 겨울에서 이른 봄까지 붉은 동백이 해안 절경과 어우러지는 자연 명소입니다.</li>
+        </ul>
+      </section>
+      <section id="transport">
+        <h2>교통</h2>
+        <p>강서구는 낙동강 삼각주와 가덕도까지 넓게 펼쳐진 지형 특성상 육·해·공 교통이 모두 발달해 있습니다. 부산 도시철도 3호선이 대저역·체육공원역·강서구청역을 지나고, 부산김해경전철이 공항역·덕두역·대저역 등으로 이어져 김해 방면과 연결됩니다. 도로는 남해고속도로와 남해고속도로제2지선, 중앙고속도로가 지역을 관통해 창원·김해·부산 도심을 잇습니다. 국내 남부권의 관문인 김해국제공항이 대저 지역에 자리해 항공 교통의 중심 역할을 하고, 거가대교를 통해 가덕도에서 거제까지 바로 이동할 수 있습니다. 여기에 부산신항선 화물철도와 부산신항이 결합해 컨테이너 물류를 처리하며, 가덕도신공항 건설이 추진되면서 강서구의 교통 위상은 더욱 커질 전망입니다.</p>
+      </section>
+      <section id="symbols">
+        <h2>지역 상징</h2>
+        <ul class="symbols">
+          <li>구화(꽃): 배꽃</li>
+          <li>구목(나무): 팽나무</li>
+          <li>구조(새): 청둥오리</li>
+        </ul>
+      </section>
+      <section id="faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary>강서구청은 어디에 있고 어떻게 가나요?</summary>
+            <p>강서구청은 부산광역시 강서구 낙동북로 477(대저1동)에 있습니다. 부산 도시철도 3호선 강서구청역에서 가깝고, 승용차로는 남해고속도로와 중앙고속도로를 이용해 접근할 수 있습니다.</p>
+          </details>
+          <details>
+            <summary>강서구의 대표 특산물은 무엇인가요?</summary>
+            <p>대저 짭짤이 토마토와 명지 대파, 강동 깻잎, 화훼가 유명하며, 바다에서는 가덕도 숭어와 굴·김·파래가 많이 납니다. 봄에는 대저토마토축제와 가덕도숭어축제가 함께 열립니다.</p>
+          </details>
+          <details>
+            <summary>가덕도는 어떻게 갈 수 있나요?</summary>
+            <p>가덕도는 거가대교와 연결도로를 통해 승용차로 오갈 수 있으며, 가덕도등대·연대봉·대항 새바지 등 해안 절경과 어촌체험마을을 즐길 수 있습니다. 현재 섬 앞바다에는 가덕도신공항 건설이 추진되고 있습니다.</p>
+          </details>
+          <details>
+            <summary>강서구에서 봄에 가볼 만한 곳은 어디인가요?</summary>
+            <p>대저생태공원의 37만㎡ 유채꽃 단지에서 4월에 유채꽃 축제가 열려 부산의 대표 봄 나들이 명소로 꼽힙니다. 맥도생태공원 산책로에서도 갈대와 철새를 함께 감상할 수 있습니다.</p>
+          </details>
+          <details>
+            <summary>강서구는 왜 철새 도래지로 유명한가요?</summary>
+            <p>낙동강이 바다로 들어가는 하구에 넓은 갯벌과 습지, 갈대밭이 발달해 있어 천연기념물 제179호 낙동강하구 철새도래지로 지정되어 있습니다. 매년 160여 종 십수만 마리의 철새가 겨울을 나기 위해 찾아옵니다.</p>
+          </details>
+          <details>
+            <summary>강서구의 상징은 무엇인가요?</summary>
+            <p>구화는 배꽃, 구목은 팽나무, 구조는 청둥오리이며, 청둥오리를 의인화한 &#x27;청두리&#x27; 캐릭터가 있습니다. 낙동강 하구의 자연환경을 상징적으로 담고 있습니다.</p>
+          </details>
+        </div>
+      </section>
+      <section id="links">
+        <h2>공식 링크</h2>
+        <ul>
+          <li><a href="https://www.bsgangseo.go.kr" rel="noopener">부산광역시 강서구청</a></li>
+          <li><a href="https://www.bsgangseo.go.kr/visit/main.do" rel="noopener">강서구 문화관광</a></li>
+        </ul>
+      </section>
+      <section id="sources">
+        <h2>출처</h2>
+        <ul class="sources">
+          <li><a href="https://ko.wikipedia.org/wiki/%EA%B0%95%EC%84%9C%EA%B5%AC_(%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C)" rel="noopener">강서구 (부산광역시) - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.bsgangseo.go.kr" rel="noopener">부산광역시 강서구청 홈페이지</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.busan.go.kr/nakdong/macdopark01" rel="noopener">맥도생태공원·대저생태공원 안내 - 부산광역시 낙동강관리본부</a> (조회 2026-07-08)</li>
+          <li><a href="https://encykorea.aks.ac.kr/Article/E0066959" rel="noopener">강서구(부산광역시) - 한국민족문화대백과사전</a> (조회 2026-07-08)</li>
+        </ul>
+      </section>) ---------- */
+  .gs-reader{
+    position:relative;z-index:2;
+    max-width:900px;margin:2.6rem auto 0;padding:0 1.2rem;
+  }
+  .gs-reader-frame{
+    position:relative;
+    border:1px solid var(--gs-line);
+    border-radius:16px;
+    background:linear-gradient(180deg,rgba(8,32,47,.66),rgba(4,16,24,.82));
+    padding:clamp(1.4rem,4vw,2.6rem);
+    box-shadow:0 0 44px rgba(0,191,255,.10) inset;
+  }
+  .gs-reader-frame::before{
+    content:"";position:absolute;top:-1px;left:24px;right:24px;height:2px;
+    background:linear-gradient(90deg,transparent,var(--gs-cyan),transparent);
+    opacity:.7;
+  }
+
+  /* the actual injected content — styled as an interlocking dossier.
+     each <section> becomes a comb cell in a masonry-ish flow */
+  #gs-content{position:relative;}
+  #gs-content section{
+    position:relative;
+    margin:0 0 1.5rem;
+    padding:1.35rem 1.5rem 1.4rem 1.7rem;
+    background:rgba(4,18,28,.5);
+    border:1px solid rgba(0,191,255,.16);
+    border-radius:12px;
+    scroll-margin-top:1.5rem;
+    transition:border-color .3s, box-shadow .3s, transform .3s;
+  }
+  #gs-content section::before{             /* mini-hex marker on the left rail */
+    content:"";position:absolute;left:-9px;top:1.85rem;
+    width:16px;height:18px;
+    clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+    background:var(--gs-cyan);opacity:.75;
+    box-shadow:0 0 12px rgba(0,191,255,.6);
+  }
+  #gs-content section:target,
+  #gs-content section.gs-focus{
+    border-color:var(--gs-cyan);
+    box-shadow:0 0 0 1px var(--gs-cyan),0 0 30px rgba(0,191,255,.22);
+  }
+  #gs-content h2{
+    font-family:var(--gs-mono);font-weight:700;
+    font-size:1.02rem;letter-spacing:.06em;
+    color:var(--gs-cyan);margin:0 0 .7rem;
+    text-transform:uppercase;
+  }
+  #gs-content h3{
+    font-family:var(--gs-round);font-weight:700;
+    color:#eaf9ff;font-size:1.05rem;margin:1.2rem 0 .5rem;
+  }
+  #gs-content p{margin:.5rem 0;color:#c6dfeb;font-weight:300;}
+  #gs-content a{color:var(--gs-cyan);text-decoration:none;border-bottom:1px dotted rgba(0,191,255,.5);}
+  #gs-content a:hover{color:#eaf9ff;border-bottom-color:#eaf9ff;}
+  #gs-content ul,#gs-content ol{padding-left:1.3rem;color:#c6dfeb;font-weight:300;}
+  #gs-content li{margin:.3rem 0;}
+
+  /* .facts — render as a honeycomb of stat cells */
+  #gs-content .facts{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:.7rem;list-style:none;padding:0;margin:.6rem 0;
+  }
+  #gs-content .facts li{
+    background:rgba(0,191,255,.06);border:1px solid rgba(0,191,255,.18);
+    border-radius:10px;padding:.7rem .8rem;font-size:.9rem;
+    color:#dff3fb;margin:0;
+  }
+  #gs-content .facts li strong{color:var(--gs-cyan);font-weight:700;display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.15rem;font-family:var(--gs-mono);}
+
+  /* .symbols */
+  #gs-content .symbols{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:.7rem;list-style:none;padding:0;margin:.6rem 0;
+  }
+  #gs-content .symbols li{
+    background:rgba(192,192,192,.07);border:1px solid rgba(192,192,192,.22);
+    border-radius:10px;padding:.7rem .85rem;color:#e9f4f9;margin:0;font-size:.92rem;
+  }
+
+  /* .faq → details/summary */
+  #gs-content .faq details{
+    border:1px solid rgba(0,191,255,.18);border-radius:10px;
+    margin:.55rem 0;background:rgba(4,18,28,.55);overflow:hidden;
+  }
+  #gs-content .faq summary{
+    cursor:pointer;padding:.85rem 1rem;font-weight:500;color:#eaf9ff;
+    list-style:none;position:relative;padding-right:2.4rem;
+    font-family:var(--gs-round);
+  }
+  #gs-content .faq summary::-webkit-details-marker{display:none;}
+  #gs-content .faq summary::after{
+    content:"⬡";position:absolute;right:1rem;top:.8rem;
+    color:var(--gs-cyan);transition:transform .3s;font-size:1rem;
+  }
+  #gs-content .faq details[open] summary::after{transform:rotate(180deg);color:#eaf9ff;}
+  #gs-content .faq details[open]{box-shadow:0 0 20px rgba(0,191,255,.14);border-color:var(--gs-cyan);}
+  #gs-content .faq details p{padding:0 1rem 1rem;margin:0;}
+
+  /* sources / links tail */
+  #gs-content #sources,#gs-content #links{font-size:.9rem;}
+
+  /* ---------- footer strip ---------- */
+  .gs-foot{
+    position:relative;z-index:2;text-align:center;
+    margin:3rem auto 0;color:#5f8497;font-family:var(--gs-mono);
+    font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;
+  }
+  .gs-foot b{color:var(--gs-silver);}
+
+  /* reduced motion */
+  @media (prefers-reduced-motion:reduce){
+    .gs-hex,#gs-content section,.gs-reader-frame{transition:none!important;}
+    .gs-hex:hover{transform:none;}
+    .gs-comb .gs-hex:nth-child(even){transform:none;}
+  }
+  /* small screens: keep the nav comb but drop interlocking offset so it stays tidy */
+  @media (max-width:560px){
+    :root{--gs-hex-w:98px;--gs-hex-h:86px;}
+    .gs-comb .gs-hex:nth-child(even){transform:none;}
+    .gs-comb .gs-hex:nth-child(even):hover{transform:translateY(-4px) scale(1.05);}
+    #gs-content section{padding-left:1.4rem;}
+  }
+</style>
+
+<div id="gs-root">
+
+  <svg id="gs-mesh" aria-hidden="true" preserveAspectRatio="xMidYMid slice" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="gs-honey" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="scale(1.6)">
+        <path d="M14 0 L42 0 L56 24 L42 48 L14 48 L0 24 Z" fill="none" stroke="#00BFFF" stroke-width="0.7" opacity="0.35"/>
+      </pattern>
+      <radialGradient id="gs-fade" cx="70%" cy="0%" r="90%">
+        <stop offset="0%" stop-color="#00BFFF" stop-opacity="0.28"/>
+        <stop offset="60%" stop-color="#00BFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#gs-honey)"/>
+    <rect width="800" height="600" fill="url(#gs-fade)"/>
+  </svg>
+
+  <header class="gs-hero">
+    <p class="gs-kicker">Busan · Estuary Grid Node</p>
+    <h1 class="gs-title">부산광역시 <b>강서구</b></h1>
+    <p class="gs-sub">강서구는 낙동강이 남해로 흘러들며 쌓아 올린 삼각주와 김해평야, 그리고 남해 끝자락의 가덕도까지 아우르는 부산에서 가장 넓은 자치구입니다. 면적은 181.5㎢로 부산 전체의 약 23.6%를 차지하지만, 그 상당 부분이 대저도·맥도·명지도 같은 강 가운데 섬과 갯벌·습지로 이루어진 점이 다른 도심 구들과 뚜렷이 구별됩니다. 대저 토마토와 명지 대파, 강동 깻잎이 자라는 비옥한 농경지가 펼쳐지는 한편, 녹산국가산업단지와 부산신항, 김해국제공항이 자리 잡아 농업·물류·첨단 제조가 한 지역에 공존합니다. 명지국제신도시와 에코델타시티 개발로 새 아파트촌이 빠르게 들어서면서, 전통적인 강 하구 농어촌에서 서부산의 성장 거점으로 성격이 바뀌고 있는 곳입니다.</p>
+    <div class="gs-metrics" aria-hidden="true">
+      <span class="gs-chip"><b>NODE</b> kr-busan-gangseo</span>
+      <span class="gs-chip"><b>낙동강 하구</b> 철새 도래지</span>
+      <span class="gs-chip"><b>김해국제공항</b> 관문</span>
+      <span class="gs-chip"><b>명지 · 녹산</b> 신도시·산단</span>
+    </div>
+  </header>
+
+  <nav class="gs-comb-wrap" aria-label="지역 정보 섹션 바로가기">
+    <div class="gs-comb-head">
+      <h2>Honeycomb Index</h2>
+      <span>벌집 셀을 누르면 해당 정보 셀로 점등·이동합니다 · JS 없이도 아래 본문은 그대로 읽힙니다</span>
+    </div>
+    <div class="gs-comb" id="gs-comb" role="list"></div>
+  </nav>
+
+  <div class="gs-reader">
+    <div class="gs-reader-frame">
+      <div id="gs-content">
+              <section id="intro">
         <h2>지역 소개</h2>
         <p>강서구는 낙동강이 남해로 흘러들며 쌓아 올린 삼각주와 김해평야, 그리고 남해 끝자락의 가덕도까지 아우르는 부산에서 가장 넓은 자치구입니다. 면적은 181.5㎢로 부산 전체의 약 23.6%를 차지하지만, 그 상당 부분이 대저도·맥도·명지도 같은 강 가운데 섬과 갯벌·습지로 이루어진 점이 다른 도심 구들과 뚜렷이 구별됩니다. 대저 토마토와 명지 대파, 강동 깻잎이 자라는 비옥한 농경지가 펼쳐지는 한편, 녹산국가산업단지와 부산신항, 김해국제공항이 자리 잡아 농업·물류·첨단 제조가 한 지역에 공존합니다. 명지국제신도시와 에코델타시티 개발로 새 아파트촌이 빠르게 들어서면서, 전통적인 강 하구 농어촌에서 서부산의 성장 거점으로 성격이 바뀌고 있는 곳입니다.</p>
       </section>
@@ -253,10 +756,247 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
           <li><a href="https://encykorea.aks.ac.kr/Article/E0066959" rel="noopener">강서구(부산광역시) - 한국민족문화대백과사전</a> (조회 2026-07-08)</li>
         </ul>
       </section>
+      </div>
     </div>
-    <footer>
-      <p>이 페이지는 공개 자료를 바탕으로 작성된 강서구 지역 정보 페이지입니다.</p>
-    </footer>
-  </main>
+  </div>
+
+  <p class="gs-foot">⬡ 강서구 · 부산광역시 &nbsp;—&nbsp; <b>낙동강이 바다로 흩어지는 육각의 물목</b> &nbsp;⬡</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var root = document.getElementById('gs-root');
+  if(!root) return;
+
+  var content = document.getElementById('gs-content');
+  var comb = document.getElementById('gs-comb');
+  if(!content || !comb) return;
+
+  /* Progressive enhancement only: if content sections exist, build the hex nav.
+     Everything below is additive — the       <section id="intro">
+        <h2>지역 소개</h2>
+        <p>강서구는 낙동강이 남해로 흘러들며 쌓아 올린 삼각주와 김해평야, 그리고 남해 끝자락의 가덕도까지 아우르는 부산에서 가장 넓은 자치구입니다. 면적은 181.5㎢로 부산 전체의 약 23.6%를 차지하지만, 그 상당 부분이 대저도·맥도·명지도 같은 강 가운데 섬과 갯벌·습지로 이루어진 점이 다른 도심 구들과 뚜렷이 구별됩니다. 대저 토마토와 명지 대파, 강동 깻잎이 자라는 비옥한 농경지가 펼쳐지는 한편, 녹산국가산업단지와 부산신항, 김해국제공항이 자리 잡아 농업·물류·첨단 제조가 한 지역에 공존합니다. 명지국제신도시와 에코델타시티 개발로 새 아파트촌이 빠르게 들어서면서, 전통적인 강 하구 농어촌에서 서부산의 성장 거점으로 성격이 바뀌고 있는 곳입니다.</p>
+      </section>
+      <section id="facts">
+        <h2>주요 통계</h2>
+        <ul class="facts">
+          <li>인구: 약 142,918명 (2021)</li>
+          <li>면적: 181.5 km²</li>
+          <li>신설: 1989-01-01</li>
+        </ul>
+      </section>
+      <section id="history">
+        <h2>역사</h2>
+        <p>강서구 일대는 가야 시대 금관가야(가락국)의 영역이었고, 532년 구형왕이 신라에 항복하면서 금관군으로 편입되어 김해 지역과 역사적 뿌리를 함께합니다. 조선 중종 39년(1544년) 가덕도에 가덕진과 천성진이 설치되면서 남해 방어의 요충지로 본격적으로 사람이 살기 시작했고, 임진왜란 때는 죽도·눌차·성북 일대에 왜성이 축조되기도 했습니다. 낙동강 하구의 넓은 갯벌은 일제강점기부터 명지·녹산·대저 지역의 대규모 간척과 제방 축조로 농경지와 마을로 바뀌어 갔습니다. 오랫동안 경상남도 김해군에 속했던 이 지역은 1978년 부산직할시로 일부 편입된 뒤, 1989년 1월 1일 북구에서 분리되어 강서구가 신설되었습니다. 2015년 천가동이 가덕도동으로 이름을 바꾸고, 2025년 녹산동이 녹산동과 신호동으로 나뉘는 등 신도시 성장에 맞춰 행정구역이 계속 재편되고 있습니다.</p>
+      </section>
+      <section id="geography">
+        <h2>지리·자연환경</h2>
+        <p>강서구는 부산 서부 낙동강 본류를 경계로 동쪽으로 사상구·사하구·북구와 접하고, 서쪽으로는 경상남도 김해시와 창원시 진해구에 맞닿아 있으며 남쪽은 남해로 열려 있습니다. 지형의 핵심은 낙동강이 바다로 들어가며 만든 삼각주로, 대저도·맥도·명지도 등 하중도와 신덕습지 같은 넓은 습지가 발달해 있어 평야가 대부분을 이룹니다. 강 가운데 섬과 하구 갯벌은 천연기념물 제179호 낙동강하구 철새도래지로 지정되어, 매년 160여 종 십수만 마리의 철새가 찾아드는 국내 대표적 철새 낙원입니다. 남쪽 바다에는 부산에서 가장 큰 섬인 가덕도가 있으며, 연대봉과 국수봉 같은 산지와 깎아지른 해안 절벽·자갈밭·동백숲이 어우러져 &#x27;해금강&#x27;에 비유되는 절경을 이룹니다. 연평균 기온 14~15℃, 강수량 1,700~1,800㎜의 온화한 기후에 평균 조차가 1.4m로, 강물과 바닷물이 만나 굴·김·파래 양식이 활발한 것도 특징입니다.</p>
+      </section>
+      <section id="characteristics">
+        <h2>지역 특징</h2>
+        <p>강서구 인구는 신도시 개발과 함께 빠르게 늘어 명지동 일대가 구에서 가장 인구가 밀집한 지역으로 성장했으며, 농어촌과 산업단지, 신도시가 한 지역에 섞인 독특한 도시 성격을 보입니다. 대저 토마토, 명지 대파, 강동 깻잎, 화훼 같은 특산 농산물과 가덕도 숭어·굴·김 등 수산물이 함께 나는 부산의 대표 먹거리 산지입니다. 녹산국가산업단지에는 조립금속·정밀기계·석유화학 업체가 밀집하고, 르노코리아 자동차 공장과 부산신항, 김해국제공항이 자리해 제조와 물류·항공이 지역 경제를 떠받칩니다. 여기에 명지국제신도시, 명지오션시티, 에코델타시티 등 대규모 신도시가 조성되면서 서부산권의 주거·산업 성장 중심지로 자리매김하고 있습니다. 가덕도 앞바다에는 24시간 운영을 목표로 한 가덕도신공항 건설이 추진되어, 강서구는 부산의 미래 관문으로도 주목받고 있습니다.</p>
+      </section>
+      <section id="landmarks">
+        <h2>대표 명소</h2>
+        <ul>
+          <li><strong>가덕도등대</strong> — 1909년 처음 점등한 근대 등대로, 대한제국 황실 문양인 오얏꽃 무늬가 새겨져 있어 개항기 건축의 특징을 잘 보여줍니다. 부산광역시 유형문화유산으로 지정되어 남해를 지키는 100여 년의 역사를 간직하고 있습니다.</li>
+          <li><strong>명지오션시티·명지국제신도시</strong> — 낙동강 하구 매립지에 조성된 대규모 계획 신도시로, 바다를 낀 아파트 단지와 상업지구가 들어서 강서구에서 가장 인구가 많은 생활 중심지입니다. 인근 에코델타시티와 함께 서부산 개발을 상징하는 곳입니다.</li>
+          <li><strong>부산신항</strong> — 녹산동·가덕도 일대에 조성된 국내 최대급 컨테이너 항만으로, 세계 물동량 상위권을 자랑하는 동북아 물류 거점입니다. 부산신항선 철도와 연결되어 항만·철도 복합 물류가 이뤄지는 강서구의 대표 산업 시설입니다.</li>
+          <li><strong>부산경남경마공원(렛츠런파크 부산경남)</strong> — 범방동에 자리한 대규모 경마·레저 시설로, 경주뿐 아니라 넓은 잔디 공원과 승마 체험장을 갖춰 가족 나들이 명소로도 이용됩니다. 서부산권의 대표적인 여가·레저 공간입니다.</li>
+        </ul>
+      </section>
+      <section id="heritage">
+        <h2>문화유산·문화시설</h2>
+        <ul>
+          <li><strong>가덕도 척화비</strong> — 흥선대원군이 쇄국정책을 알리기 위해 전국에 세운 척화비 가운데 하나로, 가덕도에 남아 부산광역시 기념물 제35호로 지정되어 있습니다. 개항기 조선의 대외 정책을 보여주는 실물 자료입니다.</li>
+          <li><strong>천성진성</strong> — 조선 중종 39년(1544년) 남해안 방어를 위해 가덕도 천성 지역에 축조된 진성으로, 왜구와 외침에 대비한 수군 방어 시설의 흔적을 남기고 있습니다. 가덕진성과 함께 조선 수군 방어 체계를 이해하는 데 중요한 유적입니다.</li>
+          <li><strong>범방동 삼층석탑</strong> — 신라 석탑 양식을 계승해 고려 전기에 세워진 높이 약 2.7m의 석탑으로 부산광역시 유형문화유산입니다. 강서 내륙에 불교문화가 이어졌음을 보여주는 귀중한 문화재입니다.</li>
+          <li><strong>대저토마토축제·가덕도숭어축제</strong> — 4월이면 대저동에서는 특산 짭짤이 토마토를 주제로 한 대저토마토축제가, 가덕도에서는 봄 숭어를 즐기는 가덕도숭어축제가 열립니다. 10월에는 강서낙동강갈대꽃축제가 열려 강서의 농어촌 문화를 알립니다.</li>
+        </ul>
+      </section>
+      <section id="nature">
+        <h2>자연·휴식</h2>
+        <ul>
+          <li><strong>맥도생태공원</strong> — 명지동 낙동강하구둑에서 대저2동 공항램프까지 강 둔치에 조성된 생태공원으로, 갈대와 연꽃·해바라기가 산책로를 따라 펼쳐집니다. 천연기념물 철새도래지에 속해 백로·청둥오리·물떼새 등을 관찰할 수 있는 자연 휴식처입니다.</li>
+          <li><strong>대저생태공원</strong> — 강서낙동대교에서 구포대교에 이르는 낙동강변 친수공간으로, 신덕습지와 자연초지, 축구장·야구장 등 체육시설을 갖추고 있습니다. 봄에 37만㎡ 규모의 유채꽃 단지가 만개해 유채꽃 축제가 열리는 부산의 대표 봄 명소입니다.</li>
+          <li><strong>가덕도 연대봉과 대항 새바지</strong> — 가덕도 중심의 연대봉은 남해와 거가대교를 조망하는 등산 코스로 인기가 높고, 대항 새바지 해안은 조용한 일출과 동백숲·자갈밭 경관을 즐길 수 있는 곳입니다. 어촌체험마을과 함께 섬 여행의 매력을 더합니다.</li>
+          <li><strong>가덕도 자생 동백군락지</strong> — 가덕도 해안 일대에 자생하는 동백나무 군락으로, 부산광역시 기념물 제36호로 지정되어 보호받고 있습니다. 겨울에서 이른 봄까지 붉은 동백이 해안 절경과 어우러지는 자연 명소입니다.</li>
+        </ul>
+      </section>
+      <section id="transport">
+        <h2>교통</h2>
+        <p>강서구는 낙동강 삼각주와 가덕도까지 넓게 펼쳐진 지형 특성상 육·해·공 교통이 모두 발달해 있습니다. 부산 도시철도 3호선이 대저역·체육공원역·강서구청역을 지나고, 부산김해경전철이 공항역·덕두역·대저역 등으로 이어져 김해 방면과 연결됩니다. 도로는 남해고속도로와 남해고속도로제2지선, 중앙고속도로가 지역을 관통해 창원·김해·부산 도심을 잇습니다. 국내 남부권의 관문인 김해국제공항이 대저 지역에 자리해 항공 교통의 중심 역할을 하고, 거가대교를 통해 가덕도에서 거제까지 바로 이동할 수 있습니다. 여기에 부산신항선 화물철도와 부산신항이 결합해 컨테이너 물류를 처리하며, 가덕도신공항 건설이 추진되면서 강서구의 교통 위상은 더욱 커질 전망입니다.</p>
+      </section>
+      <section id="symbols">
+        <h2>지역 상징</h2>
+        <ul class="symbols">
+          <li>구화(꽃): 배꽃</li>
+          <li>구목(나무): 팽나무</li>
+          <li>구조(새): 청둥오리</li>
+        </ul>
+      </section>
+      <section id="faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary>강서구청은 어디에 있고 어떻게 가나요?</summary>
+            <p>강서구청은 부산광역시 강서구 낙동북로 477(대저1동)에 있습니다. 부산 도시철도 3호선 강서구청역에서 가깝고, 승용차로는 남해고속도로와 중앙고속도로를 이용해 접근할 수 있습니다.</p>
+          </details>
+          <details>
+            <summary>강서구의 대표 특산물은 무엇인가요?</summary>
+            <p>대저 짭짤이 토마토와 명지 대파, 강동 깻잎, 화훼가 유명하며, 바다에서는 가덕도 숭어와 굴·김·파래가 많이 납니다. 봄에는 대저토마토축제와 가덕도숭어축제가 함께 열립니다.</p>
+          </details>
+          <details>
+            <summary>가덕도는 어떻게 갈 수 있나요?</summary>
+            <p>가덕도는 거가대교와 연결도로를 통해 승용차로 오갈 수 있으며, 가덕도등대·연대봉·대항 새바지 등 해안 절경과 어촌체험마을을 즐길 수 있습니다. 현재 섬 앞바다에는 가덕도신공항 건설이 추진되고 있습니다.</p>
+          </details>
+          <details>
+            <summary>강서구에서 봄에 가볼 만한 곳은 어디인가요?</summary>
+            <p>대저생태공원의 37만㎡ 유채꽃 단지에서 4월에 유채꽃 축제가 열려 부산의 대표 봄 나들이 명소로 꼽힙니다. 맥도생태공원 산책로에서도 갈대와 철새를 함께 감상할 수 있습니다.</p>
+          </details>
+          <details>
+            <summary>강서구는 왜 철새 도래지로 유명한가요?</summary>
+            <p>낙동강이 바다로 들어가는 하구에 넓은 갯벌과 습지, 갈대밭이 발달해 있어 천연기념물 제179호 낙동강하구 철새도래지로 지정되어 있습니다. 매년 160여 종 십수만 마리의 철새가 겨울을 나기 위해 찾아옵니다.</p>
+          </details>
+          <details>
+            <summary>강서구의 상징은 무엇인가요?</summary>
+            <p>구화는 배꽃, 구목은 팽나무, 구조는 청둥오리이며, 청둥오리를 의인화한 &#x27;청두리&#x27; 캐릭터가 있습니다. 낙동강 하구의 자연환경을 상징적으로 담고 있습니다.</p>
+          </details>
+        </div>
+      </section>
+      <section id="links">
+        <h2>공식 링크</h2>
+        <ul>
+          <li><a href="https://www.bsgangseo.go.kr" rel="noopener">부산광역시 강서구청</a></li>
+          <li><a href="https://www.bsgangseo.go.kr/visit/main.do" rel="noopener">강서구 문화관광</a></li>
+        </ul>
+      </section>
+      <section id="sources">
+        <h2>출처</h2>
+        <ul class="sources">
+          <li><a href="https://ko.wikipedia.org/wiki/%EA%B0%95%EC%84%9C%EA%B5%AC_(%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C)" rel="noopener">강서구 (부산광역시) - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.bsgangseo.go.kr" rel="noopener">부산광역시 강서구청 홈페이지</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.busan.go.kr/nakdong/macdopark01" rel="noopener">맥도생태공원·대저생태공원 안내 - 부산광역시 낙동강관리본부</a> (조회 2026-07-08)</li>
+          <li><a href="https://encykorea.aks.ac.kr/Article/E0066959" rel="noopener">강서구(부산광역시) - 한국민족문화대백과사전</a> (조회 2026-07-08)</li>
+        </ul>
+      </section> text is already visible. */
+
+  var SECTION_META = {
+    intro:          {label:'지역 소개', icon:'⬡'},
+    facts:          {label:'핵심 지표', icon:'▤'},
+    history:        {label:'역사',     icon:'◷'},
+    geography:      {label:'지리',     icon:'⬢'},
+    characteristics:{label:'특징',     icon:'✦'},
+    landmarks:      {label:'명소',     icon:'◈'},
+    heritage:       {label:'문화유산', icon:'❖'},
+    nature:         {label:'자연·휴식', icon:'❁'},
+    transport:      {label:'교통',     icon:'⇄'},
+    symbols:        {label:'상징',     icon:'✸'},
+    faq:            {label:'자주 묻는 질문', icon:'?'},
+    links:          {label:'관련 링크', icon:'↗'},
+    sources:        {label:'출처',     icon:'▣'}
+  };
+
+  var sections = Array.prototype.slice.call(content.querySelectorAll('section[id]'));
+  if(!sections.length){ comb.parentNode.style.display='none'; return; }
+
+  var hexes = [];
+  var n = 0;
+  sections.forEach(function(sec){
+    var id = sec.id;
+    var meta = SECTION_META[id] || {label:(sec.querySelector('h2')?sec.querySelector('h2').textContent:id), icon:'⬡'};
+    n++;
+    var idx = ('0'+n).slice(-2);
+
+    var btn = document.createElement('button');
+    btn.type='button';
+    btn.className='gs-hex';
+    btn.setAttribute('role','listitem');
+    btn.setAttribute('data-target', id);
+    btn.setAttribute('aria-label', meta.label + ' 섹션으로 이동');
+    btn.innerHTML =
+      '<span class="gs-hidx">'+idx+'</span>'+
+      '<span class="gs-hicon" aria-hidden="true">'+meta.icon+'</span>'+
+      '<span class="gs-hlabel">'+meta.label+'</span>';
+    comb.appendChild(btn);
+    hexes.push(btn);
+  });
+
+  function neighboursOf(i){
+    /* the comb is a 2-col interlock via nth-child(even) offset.
+       treat linear order but light immediate + column-adjacent cells */
+    var set=[];
+    [i-1,i+1,i-2,i+2].forEach(function(j){ if(j>=0 && j<hexes.length) set.push(j); });
+    return set;
+  }
+
+  function clearLit(){
+    hexes.forEach(function(h){ h.classList.remove('gs-lit'); });
+  }
+
+  hexes.forEach(function(btn,i){
+    btn.addEventListener('mouseenter', function(){
+      clearLit();
+      neighboursOf(i).forEach(function(j){
+        var h=hexes[j];
+        setTimeout(function(){ h.classList.add('gs-lit'); }, Math.abs(j-i)*70);
+      });
+    });
+    btn.addEventListener('mouseleave', clearLit);
+    btn.addEventListener('focus', function(){ clearLit(); neighboursOf(i).forEach(function(j){ hexes[j].classList.add('gs-lit'); }); });
+    btn.addEventListener('blur', clearLit);
+
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-target');
+      var target = document.getElementById(id);
+      if(!target) return;
+      hexes.forEach(function(h){ h.classList.remove('gs-active'); });
+      btn.classList.add('gs-active');
+      sections.forEach(function(s){ s.classList.remove('gs-focus'); });
+      target.classList.add('gs-focus');
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+      target.scrollIntoView({behavior: reduce ? 'auto':'smooth', block:'start'});
+    });
+  });
+
+  /* scroll-spy: light the hex whose section is in view */
+  if('IntersectionObserver' in window){
+    var byId={};
+    hexes.forEach(function(h){ byId[h.getAttribute('data-target')]=h; });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var h=byId[e.target.id];
+          if(h){
+            hexes.forEach(function(x){ x.classList.remove('gs-active'); });
+            h.classList.add('gs-active');
+          }
+        }
+      });
+    },{rootMargin:'-40% 0px -50% 0px', threshold:0});
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  /* Optional: enrich hero chips from region-data JSON if present (non-critical) */
+  try{
+    var dataEl=document.getElementById('region-data');
+    if(dataEl){
+      var data=JSON.parse(dataEl.textContent||dataEl.innerText||'{}');
+      /* purely decorative augmentation — content already rendered above */
+      if(data && data.coords && data.coords.length===2){
+        var foot=document.querySelector('.gs-foot');
+        if(foot){
+          var lat=Number(data.coords[0]).toFixed(3), lng=Number(data.coords[1]).toFixed(3);
+          foot.setAttribute('title','좌표 '+lat+', '+lng);
+        }
+      }
+    }
+  }catch(err){/* silent — enhancement only */}
+
+})();
+</script>
 </body>
 </html>
